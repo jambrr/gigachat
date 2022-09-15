@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Login</h1>
+    <form action="authentication/" method="post">
+        {% csrf_token %}
+        Username:<br>
+        <input name="username">
+        <br><br>
+        Country:<br>
+        <select name="country" id="country">
+            <option value="lu">lu</option>
+            <option value="us">us</option>
+            <option value="de">de</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
