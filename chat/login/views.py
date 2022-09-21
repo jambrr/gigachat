@@ -11,4 +11,5 @@ def authentication(request):
     username = request.POST['username']
     country = request.POST.getlist('country')[0]
     print(country)
-    return redirect('room:index', username=username, room_name=country)
+    return HttpResponseRedirect('/room/'+country+'?username='+username)
+    #return redirect('room:index', username=username, room_name=country)
